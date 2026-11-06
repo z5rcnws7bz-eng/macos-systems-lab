@@ -44,4 +44,34 @@ plutil -p "1401.app/Contents/Info.plist"
 file "1401.app/Contents/MacOS/1401"
 ```
 
-My working configuration pairs a zsh shell for local inspection with Codex and task-specific plugins for assisted work. I keep downloaded software separate from notes I intend to publish. This repository shares the inspection method; it contains no vendor binaries, machine logs, or private configuration. The case study covers package inspection only; hardware support and runtime behavior would need separate tests.
+My working configuration pairs a zsh shell for local inspection with Codex and task-specific plugins for assisted work. I keep downloaded software separate from notes I intend to publish. This repository shares the inspection method and reviewed project photographs; it contains no vendor binaries, raw machine log files, or private configuration. The app-bundle case study covers package inspection only; hardware support and runtime behavior would need separate tests.
+
+## Real-world hardware and diagnostic examples
+
+Photographs from my macOS systems integration and troubleshooting work, documenting hardware identification, UEFI navigation, verbose boot diagnostics, and command-line investigation.
+
+### Hardware identification
+
+The ASRock UEFI overview identifies an AB350 Pro4 motherboard, AMD Ryzen 5 1600 processor, and 16 GB of installed memory. This records the hardware context for compatibility research.
+
+![ASRock UEFI hardware overview showing the motherboard, AMD Ryzen processor, and installed memory](docs/images/uefi-hardware-overview.jpg)
+
+### UEFI configuration navigation
+
+The Advanced menu provides access to onboard devices, storage, ACPI, and AMD configuration options used during firmware investigation.
+
+![ASRock UEFI Advanced menu with onboard device, storage, ACPI, and AMD configuration categories](docs/images/uefi-advanced-menu.jpg)
+
+### Verbose boot diagnostics
+
+An intermediate macOS startup screen shows processor initialization, ACPI messages, and other boot output examined while investigating initialization behavior.
+
+![Photograph of verbose macOS boot output showing processor initialization and ACPI diagnostic messages](docs/images/verbose-boot-diagnostics.jpg)
+
+### Command-line network investigation
+
+The macOS terminal displays `networksetup` command help while exploring hardware-port and network-service diagnostics. Arguments such as `<ip>` and `<password>` are usage placeholders. The photograph documents command discovery; it does not establish that network connectivity was restored.
+
+![macOS terminal displaying networksetup command usage for network services and hardware ports](docs/images/macos-networksetup-help.jpg)
+
+The published copies are resized for web viewing and have GPS, capture-time, camera, EXIF, and XMP metadata removed. No screen text has been added or edited.
