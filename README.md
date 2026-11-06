@@ -12,7 +12,28 @@ On macOS 15.8.2 (x86_64), using zsh, I looked at the difference between a downlo
 | Reasoning about compatibility | GPU mapping, Metal device discovery, and runtime checks have distinct helpers. | A hardware identifier, an available graphics API, and a working runtime answer different questions. |
 | Planning diagnostics | The package includes preflight checks, log capture, and an uninstaller. | I can plan what evidence to collect before a change and identify the proposed recovery path. |
 
-## Try the inspection
+## Run the inspection
+
+From the repository directory, run [inspect-macos.sh](./inspect-macos.sh) with the path to your extracted copy of the app. Replace the example path with yours and keep the quotes if it contains spaces.
+
+```sh
+sh inspect-macos.sh "/path/to/1401.app"
+```
+
+The script prints its findings to the terminal without launching the app. If the app is named `1401.app` and sits in the repository directory, you can simply run `sh inspect-macos.sh`.
+
+## Results on my Mac
+
+| Check | Observed result |
+| --- | --- |
+| Host | macOS 15.8.2 on Intel (`x86_64`) |
+| App version | 1401 version 2.7.2, build 140 |
+| Minimum macOS declared by the app | 15.0 |
+| Launcher format reported by `file` | `Mach-O 64-bit executable x86_64` |
+
+My Mac meets the app’s declared minimum OS version, and the launcher architecture matches my Mac’s CPU. These checks cover the bundle on disk. Testing the driver would require a separate runtime check.
+
+## Commands behind the script
 
 From the directory containing the extracted app, these read-only commands report the host version, CPU architecture, package metadata, and launcher format:
 
