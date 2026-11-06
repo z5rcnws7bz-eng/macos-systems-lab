@@ -74,4 +74,4 @@ The macOS terminal displays `networksetup` command help while exploring hardware
 
 ![macOS terminal displaying networksetup command usage for network services and hardware ports](docs/images/macos-networksetup-help.jpg)
 
-The published copies are resized for web viewing and have GPS, capture-time, camera, EXIF, and XMP metadata removed. No screen text has been added or edited.
+The published copies are resized for web viewing and have GPS, capture-time, camera, EXIF, and XMP metadata removed. The terminal photograph has the local username and computer name blurred for privacy; diagnostic command text is preserved.
